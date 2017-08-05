@@ -36,6 +36,13 @@ Basic env: (actual/book)
 Assumptions:
 
   Git init ran by rails new command.
+  
+Git commands:
+
+  git status
+  git add.
+  git commit -m "bla bla"
+  git push origin master
 
 Steps:
 
