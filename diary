@@ -152,6 +152,8 @@ Back to Steps:
   Create customers
   
     bundle exec rails generate model customer first_name:string last_name:string email:string username:string
+    
+    bundle exec rails db:migrate
 
     Install faker
       
