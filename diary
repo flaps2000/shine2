@@ -101,6 +101,8 @@ Back to Steps:
   
     bundle exec rails webpacker:install
     
+    yarn add --dev webpack-dev-server
+    
   Installing Foreman
   
     add to gemfile
