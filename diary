@@ -135,6 +135,10 @@ Back to Steps:
     
     bundle exec rails generate devise:views
     
+  Add constraints to Postgres to enforce example.com email domain
+  
+    bundle exec rails generate migration add-email-constraint-to-users
+    
   Set schema to sql, from rb
   
     rm db/schema.rb
