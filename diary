@@ -170,6 +170,14 @@ Back to Steps:
     
     bundle exec rails db:migrate
     
+  Install Angular
+  
+    bundle exec rails webpacker:install:angular
+    
+    yarn add @angular/forms
+    
+    yarn add @angular/http
+    
 TODO:
 
   Add a Readme.md to github repository
