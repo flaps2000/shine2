@@ -178,6 +178,21 @@ Back to Steps:
     
     yarn add @angular/http
     
+  Install RSpec
+  
+    gem 'rspec-rails', '~> 3.4'
+    
+    bundle install
+    
+    bundle exec rails generate rspec:install
+    
+    phantomjs, poltergeist, database_cleaner
+    
+  Install Jasmine. (and karma and testdouble)
+  
+    yarn add jasmine \
+      jasmine-core \
+      karma karma-jasmine karma-phantomjs-launcher karma-webpack testdouble
     
 TODO:
 
@@ -187,10 +202,18 @@ TODO:
   
   Add back pagination to customer search. ANd date formatting.
   
+  Replace windows.alert in search error, for easier testing. using flash alerts. and better ui design!
+  
 NOTE:
 
   URL after search term entered, with native, non-angular, non-materialized view
   
     http://localhost:5000/customers?utf8=%E2%9C%93&keywords=bob&commit=Find+Customers
     
+WARNINGS:
+
+  Webpack error:
+  
+    WARNING in ./node_modules/@angular/core/@angular/core.es5.js
+      5646:15-36 Critical dependency: the request of a dependency is an expression
   
