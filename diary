@@ -178,11 +178,14 @@ Back to Steps:
     
     yarn add @angular/http
     
+    
 TODO:
 
-  Add a Readme.md to github repository
+  Fill out Readme.md to github repository?
   
   Reset Password action redirecting to dashboard#index. 302. Not displaying form to update passwrod!
+  
+  Add back pagination to customer search. ANd date formatting.
   
 NOTE:
 
