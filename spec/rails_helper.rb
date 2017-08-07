@@ -15,9 +15,6 @@ RSpec.configure do |config|
   config.use_transactional_fixtures = false
   config.infer_spec_type_from_file_location!
 
-  # rest of the file...
-
-
   config.filter_rails_from_backtrace!
 
   config.add_setting :screenshots_dir

@@ -13,13 +13,14 @@
 !/log/.keep
 !/tmp/.keep
 
+spec/screenshots
+# Added by webpack-rails
 /node_modules
-/yarn-error.log
-
-.byebug_history
-
-# ignore packages installed by npm
+/public/webpack
 node_modules
+/public/packs
+/public/packs-test
+/node_modules
 
 # put any other files you don't want to check in here,
 # such as .DS_Store (OSX), *.bak, etc.
@@ -28,5 +29,3 @@ node_modules
 .DS_Store
 TODO.txt
 shine2.bbprojectd
-/public/packs
-/node_modules
