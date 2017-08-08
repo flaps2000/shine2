@@ -84,6 +84,12 @@ Monitoring db: (Move to db specific help file?)
 
   brew services start/stop/restart postgresql
   
+  OR
+  
+  pg_ctl start/stop/status/restart
+  
+  Not sure which to use. Which one the system is using. etc. Seems to vary.
+  
 Back to Steps:
 
   Installing yarn: (ANalagous to Bower in previous edition of book)
