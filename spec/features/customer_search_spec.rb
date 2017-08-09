@@ -110,11 +110,11 @@ feature "Customer Search" do
     within "section.customer-details" do
       warn "YOU ARE SKIPPING TESTS!"
       if false
-      expect(page).to have_content(customer.id)
-      expect(page).to have_content(customer.first_name)
-      expect(page).to have_content(customer.last_name)
-      expect(page).to have_content(customer.email)
-      expect(page).to have_content(customer.username)
+      expect(page).to have_selector(customer.id)
+      expect(page).to have_selector(customer.first_name)
+      expect(page).to have_selector(customer.last_name)
+      expect(page).to have_selector(customer.email)
+      expect(page).to have_selector(customer.username)
       end
     end
   end

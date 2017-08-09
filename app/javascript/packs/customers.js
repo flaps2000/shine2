@@ -1,13 +1,17 @@
 import "polyfills";
 
-import { Component, NgModule                } from "@angular/core";
+import { Component, NgModule     } from "@angular/core";
 import { BrowserModule           } from "@angular/platform-browser";
 import { FormsModule             } from "@angular/forms";
 import { platformBrowserDynamic  } from "@angular/platform-browser-dynamic";
 import { HttpModule              } from "@angular/http";
-import { RouterModule              } from "@angular/router";
+import { RouterModule            } from "@angular/router";
 import { CustomerSearchComponent } from "CustomerSearchComponent";
-import { CustomerDetailsComponent } from "CustomerDetailsComponent";
+import { CustomerDetailsComponent} from "CustomerDetailsComponent";
+import { CustomerInfoComponent   } from "CustomerDetailsComponent/CustomerInfoComponent";
+import { AddressComponent        } from "CustomerDetailsComponent/AddressComponent";
+import { CreditCardComponent     } from "CustomerDetailsComponent/CreditCardComponent";
+
 
 var AppComponent = Component({
   selector: "shine-customers-app",
@@ -75,7 +79,14 @@ var CustomerAppModule = NgModule({
     HttpModule,
     routing
  ],
-  declarations: [ CustomerSearchComponent, CustomerDetailsComponent, AppComponent],
+  declarations: [
+    CustomerSearchComponent,
+    CustomerDetailsComponent,
+    CustomerInfoComponent,
+    AddressComponent,
+    CreditCardComponent,
+    AppComponent
+  ],
   bootstrap:    [ AppComponent ]
 })
 .Class({

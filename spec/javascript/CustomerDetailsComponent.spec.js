@@ -15,8 +15,6 @@ describe("CustomerDetailsComponentComponent", function() {
   });
 
   describe("ngOnInit", function() {
-
-    // ...
     
     var customer = {
       id: 1,
@@ -26,16 +24,19 @@ describe("CustomerDetailsComponentComponent", function() {
       username: "pj",
       email: "pjones@somewhere.net"
     }
-
-    // more setup to come...
     
     var createMockHttp = function(customer) {
       var response = td.object(["json"]);
       td.when(response.json()).thenReturn({ customer: customer });
 
-      var observable = td.object(["subscribe"]);
+      var observable = td.object(["subscribe", "map"]);
+
+      td.when(observable.map(
+        td.callback(response)
+      )).thenReturn(observable);
+
       td.when(observable.subscribe(
-        td.callback(response),
+        td.callback(customer),
         td.matchers.isA(Function))).thenReturn();
 
       var mockHttp = td.object(["get"]);
