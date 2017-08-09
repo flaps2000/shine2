@@ -11,7 +11,7 @@ var CustomerDetailsComponent = Component({
   constructor: [
     ActivatedRoute,
     Http,
-    function(activatedRoute, http) {
+    function(activatedRoute,http) {
       this.activatedRoute = activatedRoute;
       this.http           = http;
       this.id             = null;
@@ -23,7 +23,6 @@ var CustomerDetailsComponent = Component({
     var observableFailed = function(response) {
       alert(response);
     }
-
     var parseCustomer = function(response) {
       var customer = response.json().customer;
 
@@ -43,7 +42,6 @@ var CustomerDetailsComponent = Component({
 
       return customer;
     }
-
     var routeSuccess = function(params) {
       var observable = self.http.get(
         "/customers/" + params["id"] + ".json"
@@ -57,5 +55,26 @@ var CustomerDetailsComponent = Component({
     }
     self.activatedRoute.params.subscribe(routeSuccess,observableFailed);
   },
+  saveCustomerField: function(field_name, value) {
+    var update = {};
+    update[field_name] = value;
+    this.http.patch(
+      "/customers/" + this.customer.customer_id + ".json", update
+    ).subscribe(
+      function() {},
+      function(response) {
+        window.alert(response);
+      }
+    );
+  },
+  saveCustomer: function(update) {
+    this.saveCustomerField(update.field_name, update.value);
+  },
+  saveShippingAddress: function(update) {
+    this.saveCustomerField("shipping_" + update.field_name, update.value);
+  },
+  saveBillingAddress: function(update) {
+    this.saveCustomerField("billing_" + update.field_name, update.value);
+  }
 });
 export { CustomerDetailsComponent };
